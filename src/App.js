@@ -1,24 +1,24 @@
-import logo from './logo.svg';
 import './App.css';
+import UserBlue from './pages/userBlue/UserBlue';
+import UserRed from './pages/userRed/UserRed';
+import HelloWorld from './componets/helloWorld/HelloWorld';
+
 
 function App() {
+  const user = {name: "Anna", age: 19}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <div className='userblue'>
+          <h1>UserBlue</h1>
+
+          <UserBlue text ={user}/>
+        </div>
+        <div className= 'userRed'>
+          <h1>User Red</h1>
+          <UserRed text ={user}/>
+        </div>
+        <HelloWorld user={user}/>
+      </div>
   );
 }
 
